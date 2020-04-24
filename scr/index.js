@@ -43,9 +43,9 @@ const Index = (props) => {
   const cloudinaryUpload = (photo) => {
     const data = new FormData()
     data.append('file', photo)
-    data.append('upload_preset', "ogcodes")
-    data.append("cloud_name", "ogcodes")
-    fetch("https://api.cloudinary.com/v1_1/ogcodes/upload", {
+    data.append('upload_preset', uploadPreset)
+    data.append("cloud_name", cloudName)
+    fetch(url, {
       method: "post",
       body: data
     }).then(res => res.json()).
@@ -60,7 +60,7 @@ const Index = (props) => {
 
   return (
 
-    <TouchableOpacity onPress={selectPhotoTapped} style={styles.uploadButton}>
+    <TouchableOpacity onPress={selectPhotoTapped} style={design}>
       {props.children}
     </TouchableOpacity>
 
