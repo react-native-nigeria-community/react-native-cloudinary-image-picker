@@ -8,63 +8,15 @@ import {
   TouchableOpacity,
   Image
 } from 'react-native';
-import ImagePicker from 'react-native-image-picker';
+import Index from './scr/index'
 
 
 
-const App = () => {
-  const selectPhotoTapped = () => {
-    const options = {
-      title: 'Select Photo',
-      storageOptions: {
-        skipBackup: true,
-        path: 'images',
-      },
-    };
-    ImagePicker.showImagePicker(options, (response) => {
+const App = ({ cloudName, uploadPreset, url, response }) => {
 
-      // console.log('Response = ', response);
-      if (response.didCancel) {
-        console.log('User cancelled image picker');
-      } else if (response.error) {
-        console.log('ImagePicker Error: ', response.error);
-      } else {
-        const source = {
-          uri: response.uri,
-          type: response.type,
-          name: response.fileName,
-        }
-        cloudinaryUpload(source)
-      }
-    });
-  }
-  const cloudinaryUpload = (photo) => {
-    const data = new FormData()
-    data.append('file', photo)
-    data.append('upload_preset', 'ogcodes')
-    data.append("cloud_name", "ogcodes")
-    fetch("https://api.cloudinary.com/v1_1/ogcodes/upload", {
-      method: "post",
-      body: data
-    }).then(res => res.json()).
-      then(data => {
-        setPhoto(data.secure_url)
-
-      }).catch(err => {
-        Alert.alert("An Error Occured While Uploading")
-      })
-  }
 
   return (
-    <View>
-
-      <TouchableOpacity onPress={selectPhotoTapped} style={styles.uploadButton}>
-        <Text style={styles.uploadButtonText}>
-          Upload
-          </Text>
-      </TouchableOpacity>
-
-    </View >
+    <Index cloudName={cloudName} uploadPreset={uploadPreset} url={url} response={response} />
   );
 };
 
