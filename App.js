@@ -12,11 +12,21 @@ import Index from './scr/index'
 
 
 
-const App = ({ cloudName, uploadPreset, url, response }) => {
+const App = ({ cloudName, uploadPreset, url, response, design }) => {
 
 
   return (
-    <Index cloudName={cloudName} uploadPreset={uploadPreset} url={url} response={response} />
+    <View>
+      <Index cloudName={"ogcodes"} uploadPreset={"ogcodes"} url={"https://api.cloudinary.com/v1_1/ogcodes/upload"} response={response} design={styles.uploadButton} >
+        <Text style={styles.uploadButtonText}>
+          Upload
+          </Text>
+
+      </Index>
+
+    </View>
+
+
   );
 };
 
@@ -41,7 +51,7 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   uploadButtonText: {
-    color: '#f6f5f8',
+    color: '#000000',
     fontSize: 20,
     fontFamily: 'Roboto'
   }

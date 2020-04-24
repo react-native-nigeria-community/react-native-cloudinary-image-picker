@@ -12,7 +12,8 @@ import ImagePicker from 'react-native-image-picker';
 
 
 
-const Index = ({ cloudName, uploadPreset, url, response }) => {
+const Index = (props) => {
+  const { cloudName, uploadPreset, url, response, design } = props
   const selectPhotoTapped = () => {
     const options = {
       title: 'Select Photo',
@@ -23,17 +24,18 @@ const Index = ({ cloudName, uploadPreset, url, response }) => {
     };
     ImagePicker.showImagePicker(options, (response) => {
 
-      console.log('Response = ', response);
+      // console.log('Response = ', response);
       if (response.didCancel) {
-        console.log('User cancelled image picker');
+        // console.log('User cancelled image picker');
       } else if (response.error) {
-        console.log('ImagePicker Error: ', response.error);
+        // console.log('ImagePicker Error: ', response.error);
       } else {
         const source = {
           uri: response.uri,
           type: response.type,
           name: response.fileName,
         }
+        // console.log(source.uri)
         cloudinaryUpload(source)
       }
     });
@@ -41,7 +43,7 @@ const Index = ({ cloudName, uploadPreset, url, response }) => {
   const cloudinaryUpload = (photo) => {
     const data = new FormData()
     data.append('file', photo)
-    data.append('upload_preset', 'ogcodes')
+    data.append('upload_preset', "ogcodes")
     data.append("cloud_name", "ogcodes")
     fetch("https://api.cloudinary.com/v1_1/ogcodes/upload", {
       method: "post",
@@ -49,21 +51,20 @@ const Index = ({ cloudName, uploadPreset, url, response }) => {
     }).then(res => res.json()).
       then(data => {
         setPhoto(data.secure_url)
-
+        console.log(data.secure_url)
       }).catch(err => {
-        Alert.alert("An Error Occured While Uploading")
+        // Alert.alert("An Error Occured While Uploading")
+        console.log(err, "An Error Occured While Uploading")
       })
   }
 
   return (
-    <View>
-      <TouchableOpacity onPress={selectPhotoTapped} style={styles.uploadButton}>
-        <Text style={styles.uploadButtonText}>
-          Upload
-          </Text>
-      </TouchableOpacity>
 
-    </View >
+    <TouchableOpacity onPress={selectPhotoTapped} style={styles.uploadButton}>
+      {props.children}
+    </TouchableOpacity>
+
+
   );
 };
 
