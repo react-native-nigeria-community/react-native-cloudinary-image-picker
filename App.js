@@ -16,7 +16,7 @@ const App = ({ cloudName, uploadPreset, url, response, design }) => {
 
   return (
     <View>
-      <Index cloudName={"ogcodes"} uploadPreset={"ogcodes"} url={"https://api.cloudinary.com/v1_1/ogcodes/upload"} response={response} design={styles.uploadButton} >
+      <Index cloudName={"ogcodes"} uploadPreset={"ogcodes"} url={"https://api.cloudinary.com/v1_1/ogcodes/upload"} design={styles.uploadButton} >
         <Text style={styles.uploadButtonText}>
           Upload
           </Text>
