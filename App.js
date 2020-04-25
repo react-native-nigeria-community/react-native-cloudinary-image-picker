@@ -9,7 +9,7 @@ import {
   Alert
 } from 'react-native';
 import ImagePicker from 'react-native-image-picker';
-import Index from './scr/index'
+import Index from './src/index'
 
 
 const App = ({ cloudName, uploadPreset, url, response, design }) => {
