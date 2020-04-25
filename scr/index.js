@@ -6,7 +6,8 @@ import {
   Text,
   Dimensions,
   TouchableOpacity,
-  Image
+  Image,
+  Alert
 } from 'react-native';
 import ImagePicker from 'react-native-image-picker';
 
@@ -14,6 +15,8 @@ import ImagePicker from 'react-native-image-picker';
 
 const Index = (props) => {
   const { cloudName, uploadPreset, url, response, design } = props
+
+  // console.log(url, cloudName, uploadPreset)
   const selectPhotoTapped = () => {
     const options = {
       title: 'Select Photo',
@@ -43,18 +46,20 @@ const Index = (props) => {
   const cloudinaryUpload = (photo) => {
     const data = new FormData()
     data.append('file', photo)
-    data.append('upload_preset', uploadPreset)
-    data.append("cloud_name", cloudName)
-    fetch(url, {
+    data.append('upload_preset', 'ogcodes')
+    data.append("cloud_name", "ogcodes")
+    fetch("https://api.cloudinary.com/v1_1/ogcodes/upload", {
       method: "post",
       body: data
-    }).then(res => res.json()).
-      then(data => {
-        setPhoto(data.secure_url)
-        console.log(data.secure_url)
+    })
+      .then(console.log(data))
+      .then(res => res.json())
+      .then(data => {
+        // setPhoto(data.secure_url)
+        console.log(data)
       }).catch(err => {
-        // Alert.alert("An Error Occured While Uploading")
-        console.log(err, "An Error Occured While Uploading")
+        Alert.alert("An Error Occured While Uploading")
+        console.log(err)
       })
   }
 
