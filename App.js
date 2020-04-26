@@ -12,8 +12,8 @@ import ImagePicker from 'react-native-image-picker';
 import Index from './src/index'
 
 
-const App = ({ cloudName, uploadPreset, url, response, design }) => {
-
+const App = ({ responseData }) => {
+  console.log(responseData, "out")
   return (
     <View>
       <Index cloudName={"ogcodes"} uploadPreset={"ogcodes"} url={"https://api.cloudinary.com/v1_1/ogcodes/upload"} design={styles.uploadButton} >

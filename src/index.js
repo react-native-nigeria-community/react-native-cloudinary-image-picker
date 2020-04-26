@@ -9,7 +9,8 @@ import ImagePicker from 'react-native-image-picker';
 
 
 const Index = (props) => {
-  const { cloudName, uploadPreset, url, responseData, design } = props
+  const { cloudName, uploadPreset, url, design, } = props;
+  const [responseData, setResponseData] = useState(props);
 
   const selectPhotoTapped = () => {
     const options = {
@@ -49,17 +50,23 @@ const Index = (props) => {
       .then(res => res.json())
       .then(data => {
         // response data
-        console.log(data)
+
+        setResponseData(data)
+        // console.log(responseData.url, "in")
+        // console.log(data, "kkkk")
+        // return dat
       }).catch(err => {
         Alert.alert("An Error Occured While Uploading")
         console.log(err)
       })
+
   }
 
   return (
 
-    <TouchableOpacity onPress={selectPhotoTapped} style={design}>
+    <TouchableOpacity onPress={selectPhotoTapped} style={design} responseData={responseData}>
       {props.children}
+      {/* {console.log(responseData)} */}
     </TouchableOpacity>
 
 
