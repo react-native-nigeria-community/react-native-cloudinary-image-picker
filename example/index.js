@@ -1,16 +1,12 @@
 
-import React, { useState } from 'react'
+import React from 'react'
 import {
   TouchableOpacity,
-  Alert
 } from 'react-native';
 import ImagePicker from 'react-native-image-picker';
 
-
-
-const Index = (props) => {
+const CloudinaryImagePicker = (props) => {
   const { cloudName, uploadPreset, url, design, } = props;
-  const [responseData, setResponseData] = useState(props);
 
   const selectPhotoTapped = () => {
     const options = {
@@ -21,12 +17,10 @@ const Index = (props) => {
       },
     };
     ImagePicker.showImagePicker(options, (response) => {
-
-      // console.log('Response = ', response);
       if (response.didCancel) {
-        // console.log('User cancelled image picker');
+        props.onError('User cancelled image picker')
       } else if (response.error) {
-        // console.log('ImagePicker Error: ', response.error);
+        props.onError('ImagePicker Error: ', response.error)
       } else {
         const source = {
           uri: response.uri,
@@ -38,7 +32,6 @@ const Index = (props) => {
     });
   }
   const cloudinaryUpload = (photo) => {
-
     const data = new FormData()
     data.append('file', photo)
     data.append('upload_preset', uploadPreset)
@@ -49,28 +42,16 @@ const Index = (props) => {
     })
       .then(res => res.json())
       .then(data => {
-        // response data
-
-        setResponseData(data)
-        // console.log(responseData.url, "in")
-        // console.log(data, "kkkk")
-        // return dat
-      }).catch(err => {
-        Alert.alert("An Error Occured While Uploading")
-        console.log(err)
+        props.onSuccess(data)
       })
-
+      .catch(err => {
+        props.onError(err)
+      })
   }
-
   return (
-
-    <TouchableOpacity onPress={selectPhotoTapped} style={design} responseData={responseData}>
+    <TouchableOpacity onPress={selectPhotoTapped} style={design}>
       {props.children}
-      {/* {console.log(responseData)} */}
     </TouchableOpacity>
-
-
   );
 };
-
-export default Index;
+export default CloudinaryImagePicker;
