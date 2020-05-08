@@ -1,12 +1,25 @@
-
-import React from 'react'
+import React, {
+  useState,
+  useEffect,
+  forwardRef,
+  useImperativeHandle,
+} from "react";
 import {
-  TouchableOpacity,
-} from 'react-native';
+  Text,
+  View,
+} from "react-native";
 import ImagePicker from 'react-native-image-picker';
 
-const CloudinaryImagePicker = (props) => {
-  const { cloudName, uploadPreset, url, design, } = props;
+function CloudinaryImagePicker(props, ref) {
+  const { cloudName, uploadPreset, url, design, defaultButton, customButtom } = props;
+
+
+  useImperativeHandle(ref, () => ({
+    startupload() {
+      selectPhotoTapped();
+    },
+
+  }));
 
   const selectPhotoTapped = () => {
     const options = {
@@ -16,6 +29,8 @@ const CloudinaryImagePicker = (props) => {
         path: 'images',
       },
     };
+
+
     ImagePicker.showImagePicker(options, (response) => {
       if (response.didCancel) {
         props.onError('User cancelled image picker')
@@ -48,10 +63,29 @@ const CloudinaryImagePicker = (props) => {
         props.onError(err)
       })
   }
-  return (
+
+
+
+  const button = props.renderButton ? props.renderButton(selectPhotoTapped) : (
     <TouchableOpacity onPress={selectPhotoTapped} style={design}>
       {props.children}
     </TouchableOpacity>
-  );
+  )
+
+
+
+  return (
+    <>
+      {defaultButton && button}
+    </>
+  )
+}
+
+
+
+export default forwardRef(CloudinaryImagePicker);
+
+
+CloudinaryImagePicker.defaultProps = {
+
 };
-export default CloudinaryImagePicker;

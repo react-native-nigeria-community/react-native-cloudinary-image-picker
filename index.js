@@ -1,9 +1,24 @@
-/**
- * @format
- */
 
-import {AppRegistry} from 'react-native';
-import App from './App';
-import {name as appName} from './app.json';
+import React from 'react'
+import {
+  TouchableOpacity,
+} from 'react-native';
+import ImagePicker from 'react-native-image-picker';
 
-AppRegistry.registerComponent(appName, () => App);
+import ReactNativeCloudinaryImagePicker from './reactNativeCloudinaryImagePicker/index'
+
+const CloudinaryImagePicker = () => {
+
+  return (
+    <ReactNativeCloudinaryImagePicker
+      url=''
+      cloudName=''
+      uploadPreset=''
+      design={}
+      showDefaultButton={true}
+      customButton={true}
+
+    />
+  );
+};
+export default CloudinaryImagePicker;
