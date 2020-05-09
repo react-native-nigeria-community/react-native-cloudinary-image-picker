@@ -85,7 +85,7 @@ export default App;
 
 | Name                       | use/description                             | extra                                                        |
 | -------------------------- | ------------------------------------------- | ------------------------------------------------------------ |
-| `CLOUDINARY_URL`           | CLOUDINARY Base URL to upload asset.        | <https://api.cloudinary.com/v1_1/<your-cloud-name>/image/upload |
+| `CLOUDINARY_URL`           | CLOUDINARY Base URL to upload asset.        | `https://api.cloudinary.com/v1_1/<your-cloud-name>/image/upload` |
 | `CLOUDINARY_CLOUD_NAME`    | CLOUDINARY cloud name                       | `nill`                                                       |
 | `CLOUDINARY_UPLOAD_PRESET` | CLOUDINARY upload preset                    | `nill`                                                       |
 | `buttonText`               | default button text                         | `Upload Image`                                               |
