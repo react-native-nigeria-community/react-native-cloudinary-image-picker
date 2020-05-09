@@ -1,30 +1,19 @@
 {
-  "name": "reactNativeCloudinaryImagePicker",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
-    "start": "react-native start",
-    "test": "jest",
-    "lint": "eslint ."
+  "name": "react-native-cloudinary-image-picker",
+  "version": "0.0.2",
+  "description": "This package helps you upload assets to cloudinary with ease.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/react-native-nigeria-community/react-native-cloudinary-image-picker.git"
   },
-  "dependencies": {
-    "react": "16.9.0",
-    "react-native": "0.61.5",
-    "react-native-image-picker": "^2.3.1"
+  "keywords": [
+    "react native cloudinary image picker, react native, expo, assets, image "
+  ],
+  "author": "React Native Nigeria <reactnativenigeria@gmail.com> (https://github.com/react-native-nigeria-community/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/react-native-nigeria-community/react-native-cloudinary-image-picker/issues"
   },
-  "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/runtime": "^7.9.2",
-    "@react-native-community/eslint-config": "^1.1.0",
-    "babel-jest": "^25.4.0",
-    "eslint": "^6.8.0",
-    "jest": "^25.4.0",
-    "metro-react-native-babel-preset": "^0.59.0",
-    "react-test-renderer": "16.9.0"
-  },
-  "jest": {
-    "preset": "react-native"
-  }
+  "homepage": "https://github.com/react-native-nigeria-community/react-native-cloudinary-image-picker#readme"
 }

@@ -1,24 +1,5 @@
+import Unsigned from "./scr/unsigned";
 
-import React from 'react'
-import {
-  TouchableOpacity,
-} from 'react-native';
-import ImagePicker from 'react-native-image-picker';
+const UnsignedUpload = Unsigned;
 
-import ReactNativeCloudinaryImagePicker from './reactNativeCloudinaryImagePicker/index'
-
-const CloudinaryImagePicker = () => {
-
-  return (
-    <ReactNativeCloudinaryImagePicker
-      url=''
-      cloudName=''
-      uploadPreset=''
-      design={}
-      showDefaultButton={true}
-      customButton={true}
-
-    />
-  );
-};
-export default CloudinaryImagePicker;
+export { UnsignedUpload };
