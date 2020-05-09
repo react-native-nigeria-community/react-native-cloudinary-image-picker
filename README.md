@@ -1,2 +1,2 @@
-![react native cloudinary image picker]('./assets/art.gif')
+![react native cloudinary image picker](assets/art.gif)
 
