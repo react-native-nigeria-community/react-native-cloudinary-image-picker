@@ -40,7 +40,7 @@ expo install react-native-image-picker
 
 and that's it, you're all good to go!
 
-
+If should you have any issue setting up image picker, please visit the [official docs](https://github.com/react-native-community/react-native-image-picker) for help
 
 ### Usage
 
@@ -83,23 +83,23 @@ export default App;
 
 #### all react-native-cloudinary-image-picker API
 
-| Name                       | use/description                             | extra                                                        |
-| -------------------------- | ------------------------------------------- | ------------------------------------------------------------ |
-| `CLOUDINARY_URL`           | CLOUDINARY Base URL to upload asset.        | `https://api.cloudinary.com/v1_1/<your-cloud-name>/image/upload` |
-| `CLOUDINARY_CLOUD_NAME`    | CLOUDINARY cloud name                       | `nill`                                                       |
-| `CLOUDINARY_UPLOAD_PRESET` | CLOUDINARY upload preset                    | `nill`                                                       |
-| `buttonText`               | default button text                         | `Upload Image`                                               |
-| `buttonStyle`              | default button style                        | `{ backgroundColor: "red", width: 100 }`                     |
-| `buttonTextStyle`          | default button text style                   | `{ color: "green" }`                                         |
-| `onUploadingStart`         | callback function when upload starts        | `(e) => alert(e)`                                            |
-| `onError`                  | callback function when error occurs         | `(e) => alert(e)`                                            |
-| `onSuccess`                | callback function when upload is successful | `(e) => alert(e)`                                            |
+| Name                       | Use/Description                             | Extra                                                            | Type 
+| -------------------------- | ------------------------------------------- | -----------------------------------------------------------------|-----------------------
+| `CLOUDINARY_URL`           | CLOUDINARY Base URL to upload asset.        | `https://api.cloudinary.com/v1_1/<your-cloud-name>/image/upload` | String
+| `CLOUDINARY_CLOUD_NAME`    | CLOUDINARY cloud name                       | `<your-cloud-name>`                                              | String
+| `CLOUDINARY_UPLOAD_PRESET` | CLOUDINARY upload preset                    | `<your-upload-preset>`                                           | String
+| `buttonText`               | default button text                         | `Upload Image`                                                   | String
+| `buttonStyle`              | default button style                        | `{ backgroundColor: "red", width: 100 }`                         | Object
+| `buttonTextStyle`          | default button text style                   | `{ color: "green" }`                                             | Object
+| `onUploadingStart`         | callback function when upload starts        | `(e) => alert(e)`                                                | Function
+| `onError`                  | callback function when error occurs         | `(e) => alert(e)`                                                | Function
+| `onSuccess`                | callback function when upload is successful | `(e) => alert(e)`                                                | Function
 
 
 
 ## Useful Resources
 
-- [React Native : How to upload an image to Cloudinary.](https://dev.to/godswillokokon/react-native-how-to-upload-an-image-to-cloudinary-4okg)  by [Godswill okokon](https://twitter.com/Godswillokokon) 
+- [React Native : How to upload an image to Cloudinary.](https://medium.com/react-native-nigeria/react-native-how-to-upload-an-image-to-cloudinary-da3693f0ae61)  by [Godswill Okokon](https://twitter.com/Godswillokokon) 
 
 ## Contributions
 
