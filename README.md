@@ -40,7 +40,7 @@ expo install react-native-image-picker
 
 and that's it, you're all good to go!
 
-
+If should you have any issue setting up image picker, please visit the [official docs](https://github.com/react-native-community/react-native-image-picker) for help
 
 ### Usage
 
@@ -99,7 +99,7 @@ export default App;
 
 ## Useful Resources
 
-- [React Native : How to upload an image to Cloudinary.](https://dev.to/godswillokokon/react-native-how-to-upload-an-image-to-cloudinary-4okg)  by [Godswill okokon](https://twitter.com/Godswillokokon) 
+- [React Native : How to upload an image to Cloudinary.](https://medium.com/react-native-nigeria/react-native-how-to-upload-an-image-to-cloudinary-da3693f0ae61)  by [Godswill Okokon](https://twitter.com/Godswillokokon) 
 
 ## Contributions
 
