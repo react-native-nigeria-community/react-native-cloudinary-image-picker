@@ -126,7 +126,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://ogcodes.netlify.com/"><img src="https://avatars1.githubusercontent.com/u/34509527?v=4" width="100px;" alt=""/><br /><sub><b>OGcodes</b></sub></a><br /><a href="https://github.com/react-native-nigeria-community/react-native-cloudinary-image-picker/commits?author=godswillokokon" title="Code">💻</a></td>
-    <td align="center"><a href="https://linksnest.com/just1and0"><img src="https://avatars3.githubusercontent.com/u/17249207?v=4" width="100px;" alt=""/><br /><sub><b>Oluwatobi Shokunbi </b></sub></a><br /><a href="https://github.com/react-native-nigeria-community/react-native-cloudinary-image-picker/commits?author=just1and0" title="Code">💻</a></td>
+    <td align="center"><a href="https://linksnest.com/just1and0"><img src="https://avatars3.githubusercontent.com/u/17249207?v=4" width="100px;" alt=""/><br /><sub><b>Oluwatobi Shokunbi </b></sub></a><br /><a href="https://github.com/react-native-nigeria-community/react-native-cloudinary-image-picker/commits?author=just1and0" title="Code">💻</a> <a href="https://github.com/react-native-nigeria-community/react-native-cloudinary-image-picker/commits?author=just1and0" title="Documentation">📖</a></td>
   </tr>
 </table>
 
