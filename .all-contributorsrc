@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "godswillokokon",
+      "name": "OGcodes",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/34509527?v=4",
+      "profile": "https://ogcodes.netlify.com/",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "react-native-cloudinary-image-picker",
+  "projectOwner": "react-native-nigeria-community",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
