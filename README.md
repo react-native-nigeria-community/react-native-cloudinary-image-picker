@@ -68,6 +68,14 @@ function App() {
         CLOUDINARY_URL="<your-url-goes-here>"
         CLOUDINARY_CLOUD_NAME="<cloud-name-goes-here>"
         CLOUDINARY_UPLOAD_PRESET="<upload-preset-goes-here>"
+        CLOUDINARY_FOLDER="<folder-name>"
+        renderComponent={
+                <Image
+                  source={icon.jpeg}
+                  resizeMode="contain"
+                  style={styles.buttonIcon}
+                />
+              }
         onUploadingStart={e => console.log(e)}
         onSuccess={e => console.log(e)}
         onError={e => console.log(e)}
