@@ -99,9 +99,9 @@ export default App;
 | `CLOUDINARY_URL`           | CLOUDINARY Base URL to upload asset.        | `https://api.cloudinary.com/v1_1/<your-cloud-name>/image/upload` | String
 | `CLOUDINARY_CLOUD_NAME`    | CLOUDINARY cloud name                       | `<your-cloud-name>`                                              | String
 | `CLOUDINARY_UPLOAD_PRESET` | CLOUDINARY upload preset                    | `<your-upload-preset>`                                           | String
-| `buttonText`               | default button text                         | `Upload Image`                                                   | String
+| `CLOUDINARY_FOLDER`        | CLOUDINARY folder name                      | `<your-folder-name>`                                             | String
+| `renderComponent`          | React Element                               | `<Image/>`                                                       | React Element
 | `buttonStyle`              | default button style                        | `{ backgroundColor: "red", width: 100 }`                         | Object
-| `buttonTextStyle`          | default button text style                   | `{ color: "green" }`                                             | Object
 | `onUploadingStart`         | callback function when upload starts        | `(e) => alert(e)`                                                | Function
 | `onError`                  | callback function when error occurs         | `(e) => alert(e)`                                                | Function
 | `onSuccess`                | callback function when upload is successful | `(e) => alert(e)`                                                | Function
